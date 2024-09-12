@@ -1,0 +1,84 @@
+    /*
+    * style.css
+    *
+    * button night/day
+    */
+
+    /* Set box-sizing rules */
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    /* colori utilizzati per passare da tema light a tema dark (vicerversa) */
+    :root {
+        --bg-light: white;
+        --bg-dark: black;
+        --container-bg-light: white;
+        --container-bg-dark: black;
+        --button-bg-light: white;
+        --button-bg-dark: black;
+    }
+
+    /* ------------------------------------------------------------ */
+
+    main {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--bg-light);
+        transition: background-color 0.5s;
+    }
+
+
+    /* --------------------- INIZIO BOTTONE ------------------------ */
+
+    .container {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        height: 70px;
+        width: 250px;
+        background-color: var(--container-bg-dark);
+        border-radius: 70px;
+        transition: background-color 0.2s ease;
+    }
+
+    .button {
+        height: 55px;
+        width: 55px;
+        background-color: var(--button-bg-light);
+        border-radius: 50px;
+        transition: transform 0.3s ease-in-out, background-color 0.2s ease;
+        transform: translateX(20px);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    /* --------------------- FINE BOTTONE ------------------------ */
+
+    /* PASSAGIO AL TEMA DARK tramite add/remove delle classi sottostanti */
+    main.darkMode {
+        background-color: var(--bg-dark);
+    }
+
+    div.container.darkContainer {
+        background-color: var(--container-bg-light);
+    }
+
+    div.button.darkButton {
+        background-color: var(--button-bg-dark);
+        transform: translateX(175px);
+    }
