@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* main colors + main fonts of the portofolio website */
+:root {
+    --bg-color: #0f0e0e;
+    --prim-color: #03045E;
+    --sec-color: #023E8A;
+    --third-color: #0077B6;
+    --four-color: #0096C7;
+    --fifht-color: #00B4D8;
+    --six-color: #48CAE4;
+
+    --prim-font: "Montserrat", sans-serif;
+    --sec-font: "Raleway", sans-serif;
+
+}
+
+
+body {
+    background-color: var(--bg-color);
+}
+
+
+
+/*! -------------------------------------start HEADER------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    padding: 18px 2%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+
+
+/* adding a transition to the logo of the navbar */
+a#logo img {
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05, 1.1);
+    }
+}
+
+
+
+/* distance between the links of the nav bar */
+nav ul li {
+    display: inline-block;
+    padding: 0 0.75em;
+}
+
+/* transition to the hover on links of navbar + animations of shake on :hover only on the LINKS NAVIGATION ON THE PAGE */
+nav ul li:nth-child(-n+4) a {
+    display: inline-block;
+    padding-bottom: 5px;
+    transition:
+        color 0.3s ease,
+        border-bottom 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--four-color);
+        border-bottom: 3px solid var(--third-color);
+    }
+}
+
+/* styling COMMON to the links of the navigation bar and the button of CV download*/
+nav ul li a,
+nav ul li a button#CVdownload {
+    color: whitesmoke;
+    font-size: 0.75em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+
+/* styling the button of download CV + adding a transition on :hover */
+header nav ul li a button#CVdownload {
+    background-color: var(--four-color);
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 9px 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.9s ease-in-out;
+
+    &:hover {
+        background-color: var(--sec-color);
+        transform: rotateY(360deg);
+    }
+}
+
+header nav ul li a button#CVdownload i {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+/*!------------------------------------- end HEADER -------------------------------------*/
+
+
+
+
+/*!------------------------------------- start MAIN -------------------------------------*/
+
+
+
+/*?---------------------- start 01 ARTICLE ABOUT ME -------------------------------------*/
+
+
+section#aboutMe {
+    /* background-color: gray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    min-height: 250px;
+    padding: 10px;
+    margin: 80px auto 0;
+}
+
+
+
+
+
+
+/* ---------- 01. BOX OF SECTION, contains the pic of me --------*/
+div.myPhoto {
+    /* background-color: red; */
+}
+
+div.myPhoto img {
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    animation: borderLight 3s linear infinite;
+}
+
+@keyframes borderLight {
+    0% {
+        box-shadow: rgba(255, 255, 255, 0) 0 0 0 0;
+    }
+
+    25% {
+        box-shadow: rgba(255, 255, 255, 0.8) 0 0 15px 5px;
+    }
+
+    50% {
+        box-shadow: var(--sec-color) 0 0 30px 10px;
+    }
+
+    75% {
+        box-shadow: rgba(255, 255, 255, 0.8) 0 0 15px 5px;
+    }
+
+    100% {
+        box-shadow: rgba(255, 255, 255, 0) 0 0 0 0;
+    }
+}
+
+
+
+/* ---------- 01. BOX OF SECTION, contains the bio of me + links + hire me button --------*/
+div.myInfo {
+    /* background-color: yellowgreen; */
+    width: 80%;
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+
+/* BIO OF ME */
+div.myInfo div.blog h1 {
+    color: whitesmoke;
+    font-size: 3em;
+    font-weight: 450;
+    font-family: var(--prim-font);
+}
+
+div.myInfo div.blog h1 span {
+    color: var(--prim-color);
+}
+
+
+div.myInfo div.blog h2 {
+    color: whitesmoke;
+    font-size: 2.2em;
+    font-family: var(--prim-font);
+    margin: 0.2em 0 0;
+}
+
+div.myInfo div.blog h2 span {
+    color: var(--sec-color);
+}
+
+
+div.myInfo div.blog p {
+    color: white;
+    font-size: 0.8em;
+    font-family: var(--sec-font);
+    margin: 1em 0;
+}
+
+
+
+/* SOCIALS LINK ICON */
+div.myInfo div.socials {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1.7em 0 2em;
+}
+
+div.myInfo div.socials a i {
+    display: inline-block;
+    color: var(--third-color);
+    font-size: 1.2em;
+    padding: 0.35em;
+    border: 2px solid var(--sec-color);
+    border-radius: 5em;
+    margin-right: 1.8em;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: var(--four-color);
+        color: black;
+        animation: shake 0.5s ease-in-out;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-2px);
+    }
+
+    50% {
+        transform: translateX(2px);
+    }
+
+    75% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+/* TODO HIRE ME BUTOTN ------------------------------------*/
+div.myInfo div.hireMe a button#contactMe {
+    background-color: var(--four-color);
+    padding: 9px 20px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.9s ease-in-out;
+
+    &:hover {
+        background-color: var(--sec-color);
+        transform: rotateY(360deg);
+    }
+}
+
+
+
+
+/*?---------------------- end 01 ARTICLE ABOUT ME -------------------------------------*/
+
+/*!------------------------------------- end MAIN -------------------------------------*/

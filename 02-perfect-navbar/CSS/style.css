@@ -1,0 +1,93 @@
+/**
+ * style.css
+ *
+ *
+ * let's sets also the box-sizing property to border-box for all elements.
+ *
+ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+
+/* dare spazio tra i 3 containers principali della nav bar tramite FLEX-BOX
+diamo anche un po di spazio ai lati all'header (quindi tutti gli elementi al suo interno) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 2%;
+}
+
+
+/* mettiamo un po di spazio tra i link tramite altro padding, e allineamoli sulla stessa riga
+tramite display: inline-block */
+header nav ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+
+header nav ul li a {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: rgb(61, 113, 182);
+    }
+}
+
+
+/* stilizziamo in maniera uguale il font style degli elementi del header (links <a>)
+e il testo del bottone contenuto sempre dentro un link <a> */
+a,
+button {
+    font-size: 17px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+
+/* andiamo a stilizzare il bottone con PROPRIETA COMUNI per registrarsi e per accedere */
+header a button {
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/*? registazione */
+header a button#registration {
+    background-color: rgba(0, 136, 169, 1);
+
+    &:hover {
+        background-color: rgb(0, 86, 108);
+    }
+}
+
+/*? accesso */
+header a button#access {
+    background-color: rgb(94, 94, 231);
+
+    &:hover {
+        background-color: rgb(64, 64, 161);
+    }
+}
