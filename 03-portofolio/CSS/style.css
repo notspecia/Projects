@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /**
  * style.css
@@ -24,7 +24,7 @@ html {
 
 /* main colors + main fonts of the portofolio website */
 :root {
-    --bg-color: #0f0e0e;
+    --bg-color: #161616;
     --prim-color: #03045E;
     --sec-color: #023E8A;
     --third-color: #0077B6;
@@ -33,7 +33,7 @@ html {
     --six-color: #48CAE4;
 
     --prim-font: "Montserrat", sans-serif;
-    --sec-font: "Raleway", sans-serif;
+    --sec-font: "Poppins", sans-serif;
 
 }
 
@@ -68,6 +68,8 @@ header {
 
 /* adding a transition to the logo of the navbar */
 a#logo img {
+    width: 2.5em;
+    height: 2.5em;
     transition: transform 0.2s ease-in-out;
 
     &:hover {
@@ -102,7 +104,7 @@ nav ul li a,
 nav ul li a button#CVdownload {
     color: whitesmoke;
     font-size: 0.75em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--sec-font);
     text-decoration: none;
 }
 
@@ -169,7 +171,7 @@ div.myPhoto img {
     width: 180px;
     height: 180px;
     border-radius: 100px;
-    animation: borderLight 3s linear infinite;
+    animation: borderLight 4s linear infinite;
 }
 
 @keyframes borderLight {
@@ -223,7 +225,7 @@ div.myInfo div.blog h2 {
     color: whitesmoke;
     font-size: 2.2em;
     font-family: var(--prim-font);
-    margin: 0.2em 0 0;
+    margin: 0.5em 0 0.2em;
 }
 
 div.myInfo div.blog h2 span {
@@ -244,14 +246,14 @@ div.myInfo div.blog p {
 div.myInfo div.socials {
     display: flex;
     justify-content: flex-start;
-    margin: 1.7em 0 2em;
+    margin: 1em 0 2em;
 }
 
 div.myInfo div.socials a i {
     display: inline-block;
     color: var(--third-color);
     font-size: 1.2em;
-    padding: 0.35em;
+    padding: 0.32em;
     border: 2px solid var(--sec-color);
     border-radius: 5em;
     margin-right: 1.8em;
@@ -288,21 +290,22 @@ div.myInfo div.socials a i {
 
 
 
-/* TODO HIRE ME BUTOTN ------------------------------------*/
+/* HIRE ME BUTTON */
 div.myInfo div.hireMe a button#contactMe {
-    background-color: var(--four-color);
-    padding: 9px 20px;
-    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 0.9em;
+    font-family: var(--sec-font);
+    letter-spacing: 0.1em;
+    padding: 0.6em 1.3em;
+    border: 3px solid var(--prim-color);
     border-radius: 50px;
-    margin-top: 4px;
     cursor: pointer;
-    transition:
-        background-color 0.3s ease,
-        transform 0.9s ease-in-out;
+    transition: all 0.3s ease;
 
     &:hover {
-        background-color: var(--sec-color);
-        transform: rotateY(360deg);
+        box-shadow: whitesmoke 0 0 25px;
+        transform: scale(1.1);
     }
 }
 
