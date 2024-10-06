@@ -9,7 +9,7 @@
     <meta name="description" content="Web Developer">
     <meta name="author" content="Speciale Gabriele">
 
-    <!-- eternal CSS file reset.css -->
+    <!-- external CSS file reset.css -->
     <link rel="stylesheet" href="CSS/reset.css">
 
     <!-- external CSS file style -->
@@ -25,17 +25,17 @@
 
     <!--! start HEADER -->
     <header id="header">
-        <a id="logo" href="#header" aria-label="Home page"><img src="IMG/logo-svgrepo-com.svg" alt="logo"></a>
+        <a id="logo" href="#" aria-label="Home page"><img src="IMG/logo-svgrepo-com.svg"
+                alt="Web Developer Portfolio Logo"></a>
         <nav>
             <ul>
                 <li><a href="#aboutMe">About me</a></li>
-                <li><a href="#">Technical Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact me</a></li>
-                <li>
-                    <a href="PDF/cv_Speciale_Gabriele.pdf" target="_blank"
-                        aria-label="Download Curriculum Vitae"><button id="CVdownload">Download CV<i
-                                class="bi bi-file-earmark-pdf"></i></button></a>
+                <li><a id="CVdownload" href="PDF/cv_Speciale_Gabriele.pdf" target="_blank"
+                        aria-label="Download Curriculum Vitae">
+                        Download CV<i class="bi bi-file-earmark-pdf"></i></a>
                 </li>
             </ul>
         </nav>
@@ -46,6 +46,7 @@
 
     <!--! start MAIN  -->
     <main>
+
 
         <!--? contains the first section ABOUT ME -->
         <section id="aboutMe">
@@ -78,9 +79,9 @@
                     <a href=""><i class="bi bi-instagram"></i></a>
                 </div>
 
-                <!-- todo a button which sent to the section contact me -->
+                <!-- button which sent to the section contact me -->
                 <div class="hireMe">
-                    <a href="#"><button id="contactMe">Hire me</button></a>
+                    <a id="contactMe" href="#">Hire me</a>
                 </div>
 
             </div>
@@ -89,6 +90,81 @@
 
 
 
+
+        <!--? XTODO contains my technical skills about programming / web development -->
+        <section id="skills" class="scrollAppear">
+            <h2>My <span>skills</span></h2>
+
+            <!-- container flex, which contains all the programming languages /markup / style i learned 
+            every div.language is composed by: image + progress total % + progress acctualy learned %-->
+            <div class="container">
+
+                <div class="language">
+                    <img src="/IMG/HTML5_logo_and_wordmark.svg.png" alt="HTMLlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/images-removebg-preview.png" alt="CSSlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/jspng.png" alt="JSlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/Angular_full_color_logo.svg.png" alt="ANGULARlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/react_logo-512.webp" alt="REACTlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/wordpress-logo-wordpress-icon-transparent-free-png.webp" alt="WORDPRESSlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/php-icon-256x256-oq5bc0bt.png" alt="PHPlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/mysql-logo-vector-1.svg" alt="MYSQLlogo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+
+                <div class="language">
+                    <img src="/IMG/C++_logo.png" alt="C++logo">
+                    <div class="progress">
+                        <div class="progress-bar" data-percentage="90">90%</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
 
 
 
